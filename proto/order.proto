@@ -8,6 +8,7 @@ package order;
 
 service OrderService {
   rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
+  rpc sayHello (HelloRequest) returns (HelloReply) {}
 }
 
 message CreateOrderRequest {
@@ -20,4 +21,14 @@ message CreateOrderResponse {
   int32 status = 1;
   repeated string error = 2;
   int32 id = 3;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
 }
