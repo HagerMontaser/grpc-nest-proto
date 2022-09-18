@@ -8,7 +8,7 @@ package order;
 
 service OrderService {
   rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc Hello (HelloRequest) returns (HelloReply) {}
 }
 
 message CreateOrderRequest {
